@@ -11,6 +11,7 @@
     "preview:webpack": "npm run lint && webpack serve --mode=development",
     "preview:vite": "npm run lint && vite preview",
     "lint": "eslint . --ext .js"
+    "deploy": "npm run build:vite && gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^5.4.0",
