@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header__container">
+    <a class="header__logo" href="./index.html" aria-label="Crypto Track Home" data-i18n="brand.name">
+      Crypto Track
+    </a>
+
+    <nav class="header__nav nav" aria-label="Main navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a
+            class="nav__link <%= activePage === 'dashboard' ? 'nav__link--active' : '' %>"
+            href="./index.html"
+            <%= activePage === 'dashboard' ? 'aria-current="page"' : '' %>
+            data-i18n="nav.dashboard"
+          >
+            Dashboard
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link <%= activePage === 'assets' ? 'nav__link--active' : '' %>"
+            href="./assets.html"
+            <%= activePage === 'assets' ? 'aria-current="page"' : '' %>
+            data-i18n="nav.assets"
+          >
+            Assets
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link <%= activePage === 'details' ? 'nav__link--active' : '' %>"
+            href="./asset-details.html"
+            <%= activePage === 'details' ? 'aria-current="page"' : '' %>
+            data-i18n="nav.details"
+          >
+            Asset Details
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link <%= activePage === 'profile' ? 'nav__link--active' : '' %>"
+            href="./profile.html"
+            <%= activePage === 'profile' ? 'aria-current="page"' : '' %>
+            data-i18n="nav.profile"
+          >
+            Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__connect-btn button button--primary" type="button" data-i18n="header.connect">
+      Connect
+    </button>
+  </div>
+</header>

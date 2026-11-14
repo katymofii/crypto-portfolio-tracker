@@ -1,0 +1,27 @@
+<article class="coin-card" itemscope itemtype="https://schema.org/Product">
+  <header class="coin-card__header">
+    <picture class="coin-card__icon">
+      <source srcset="./images/<%= ticker.toLowerCase() %>.webp" type="image/webp" />
+      <img
+        src="./images/<%= ticker.toLowerCase() %>.png"
+        alt="<%= name %> icon"
+        width="32"
+        height="32"
+        itemprop="image"
+      />
+    </picture>
+    <div class="coin-card__title-group">
+      <h3 class="coin-card__name" itemprop="name">
+        <a class="coin-card__link" href="./asset-details.html"><%= name %></a>
+      </h3>
+      <span class="coin-card__ticker" itemprop="sku"><%= ticker %></span>
+    </div>
+    <span class="coin-card__badge coin-card__badge--<%= trend %>"><%= change %></span>
+  </header>
+
+  <div class="coin-card__body" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="USD" />
+    <p class="coin-card__value" itemprop="price" content="<%= rawPrice %>"><%= value %></p>
+    <p class="coin-card__amount"><%= amount %></p>
+  </div>
+</article>
