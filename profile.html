@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('src/partials/head.ejs', { title: 'Crypto Track — Account Settings' }) %>
+  </head>
+  <body class="page">
+    <%- include('src/partials/header.ejs', { activePage: 'profile' }) %>
+
+    <main class="main">
+      <section class="profile" aria-labelledby="profile-heading">
+        <h1 class="profile__title" id="profile-heading" data-i18n="profile.title">
+          Account Settings
+        </h1>
+
+        <div class="profile__grid">
+          <aside class="user-card" aria-labelledby="user-name-heading">
+            <picture class="user-card__avatar">
+              <source srcset="./images/avatar-dm.webp" type="image/webp" />
+              <img
+                src="./images/avatar-dm.png"
+                alt="Dexter Morgan profile avatar"
+                width="80"
+                height="80"
+              />
+            </picture>
+
+            <h2 class="user-card__name" id="user-name-heading">Dexter Morgan</h2>
+            <p class="user-card__email">dex.crypto@gmail.com</p>
+            <span class="user-card__badge" data-i18n="profile.verified">Verified Account</span>
+
+            <div class="user-card__actions">
+              <button class="button button--secondary" type="button" data-i18n="profile.changeAvatar">
+                Change Avatar
+              </button>
+              <button class="button button--danger" type="button" data-i18n="profile.logOut">
+                Log Out
+              </button>
+            </div>
+          </aside>
+
+          <section class="settings-card" aria-labelledby="preferences-heading">
+            <h2 class="settings-card__title" id="preferences-heading" data-i18n="profile.preferences">
+              Preferences &amp; Security
+            </h2>
+
+            <form class="settings-card__form" action="./profile.html" method="post">
+              <div class="form-field">
+                <label class="form-field__label" for="display-name" data-i18n="profile.displayName">
+                  Display Name
+                </label>
+                <input
+                  class="form-field__input input"
+                  id="display-name"
+                  name="displayName"
+                  type="text"
+                  value="Dexter Morgan"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label" for="base-currency" data-i18n="profile.baseCurrency">
+                  Base Currency
+                </label>
+                <select class="form-field__select input" id="base-currency" name="baseCurrency">
+                  <option value="USD" selected>USD ($)</option>
+                  <option value="EUR">EUR (&euro;)</option>
+                  <option value="UAH">UAH (&#8372;)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label" for="notification-email" data-i18n="profile.email">
+                  Notification Email
+                </label>
+                <input
+                  class="form-field__input input"
+                  id="notification-email"
+                  name="email"
+                  type="email"
+                  value="dex.crypto@gmail.com"
+                />
+              </div>
+
+              <div class="form-field form-field--checkbox">
+                <input
+                  class="form-field__checkbox"
+                  id="dark-mode"
+                  name="darkMode"
+                  type="checkbox"
+                  checked
+                />
+                <label class="form-field__label" for="dark-mode" data-i18n="profile.darkMode">
+                  Dark Mode
+                </label>
+              </div>
+
+              <div class="settings-card__footer">
+                <button class="button button--primary" type="submit" data-i18n="profile.saveChanges">
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <%- include('src/partials/footer.ejs') %>
+  </body>
+</html>

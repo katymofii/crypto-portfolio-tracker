@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('src/partials/head.ejs', { title: 'Crypto Track — Bitcoin Details' }) %>
+  </head>
+  <body class="page">
+    <%- include('src/partials/header.ejs', { activePage: 'details' }) %>
+
+    <main class="main">
+      <article class="asset-details" itemscope itemtype="https://schema.org/Product">
+        <nav class="asset-details__breadcrumb" aria-label="Breadcrumb">
+          <a class="asset-details__back-link" href="./assets.html" data-i18n="details.backToAssets">
+            &larr; Back to Assets
+          </a>
+        </nav>
+
+        <header class="asset-details__header">
+          <div class="asset-details__identity">
+            <picture class="asset-details__icon">
+              <source srcset="./images/btc.webp" type="image/webp" />
+              <img
+                src="./images/btc.png"
+                alt="Bitcoin logo"
+                width="48"
+                height="48"
+                itemprop="image"
+              />
+            </picture>
+            <div class="asset-details__title-group">
+              <h1 class="asset-details__name" itemprop="name">Bitcoin</h1>
+              <span class="asset-details__ticker" itemprop="sku">BTC</span>
+            </div>
+          </div>
+
+          <div class="asset-details__price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="USD" />
+            <p class="asset-details__price" itemprop="price" content="86549.00">$86,549.00</p>
+            <span class="asset-details__badge asset-details__badge--positive">+3.12%</span>
+          </div>
+        </header>
+
+        <div class="asset-details__grid">
+          <section class="chart-card" aria-labelledby="chart-heading">
+            <div class="chart-card__header">
+              <h2 class="chart-card__title" id="chart-heading" data-i18n="details.priceChart">
+                Price Chart
+              </h2>
+              <div class="chart-card__timeframes" role="group" aria-label="Select chart timeframe">
+                <button class="timeframe-btn timeframe-btn--active" type="button" aria-pressed="true">1D</button>
+                <button class="timeframe-btn" type="button" aria-pressed="false">1W</button>
+                <button class="timeframe-btn" type="button" aria-pressed="false">1M</button>
+                <button class="timeframe-btn" type="button" aria-pressed="false">1Y</button>
+                <button class="timeframe-btn" type="button" aria-pressed="false">ALL</button>
+              </div>
+            </div>
+
+            <figure class="chart-card__figure">
+              <picture>
+                <source srcset="./images/btc-chart.webp" type="image/webp" />
+                <img
+                  class="chart-card__image"
+                  src="./images/btc-chart.png"
+                  alt="Bitcoin 24-hour upward price chart"
+                  width="840"
+                  height="320"
+                />
+              </picture>
+              <figcaption class="visually-hidden" data-i18n="details.chartCaption">
+                Bitcoin price dynamics over the selected timeframe
+              </figcaption>
+            </figure>
+          </section>
+
+          <aside class="trade-widget" aria-labelledby="trade-heading">
+            <h2 class="visually-hidden" id="trade-heading" data-i18n="details.tradeWidget">
+              Buy or Sell Bitcoin
+            </h2>
+
+            <div class="trade-widget__tabs" role="tablist" aria-label="Order side">
+              <button class="trade-widget__tab trade-widget__tab--active" type="button" role="tab" aria-selected="true" data-i18n="trade.buy">
+                Buy
+              </button>
+              <button class="trade-widget__tab" type="button" role="tab" aria-selected="false" data-i18n="trade.sell">
+                Sell
+              </button>
+            </div>
+
+            <form class="trade-widget__form" action="./asset-details.html" method="post">
+              <div class="form-field">
+                <label class="form-field__label" for="pay-amount" data-i18n="trade.payWith">
+                  Pay with (USD)
+                </label>
+                <input
+                  class="form-field__input input"
+                  id="pay-amount"
+                  name="payAmount"
+                  type="text"
+                  value="1,000 USD"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label" for="receive-amount" data-i18n="trade.youReceive">
+                  You receive (BTC)
+                </label>
+                <input
+                  class="form-field__input input"
+                  id="receive-amount"
+                  name="receiveAmount"
+                  type="text"
+                  value="0.0115 BTC"
+                  readonly
+                />
+              </div>
+
+              <button class="trade-widget__submit button button--primary" type="submit" data-i18n="trade.buyBitcoin">
+                Buy Bitcoin
+              </button>
+            </form>
+          </aside>
+        </div>
+
+        <section class="market-stats" aria-labelledby="stats-heading">
+          <h2 class="market-stats__title" id="stats-heading" data-i18n="details.marketStats">
+            Market Statistics
+          </h2>
+
+          <dl class="market-stats__list">
+            <div class="market-stats__item">
+              <dt class="market-stats__term" data-i18n="stats.marketCap">Market Cap</dt>
+              <dd class="market-stats__value">$1.71 Trillion</dd>
+            </div>
+            <div class="market-stats__item">
+              <dt class="market-stats__term" data-i18n="stats.volume24h">24h Trading Volume</dt>
+              <dd class="market-stats__value">$1.69 Billion</dd>
+            </div>
+            <div class="market-stats__item">
+              <dt class="market-stats__term" data-i18n="stats.ath">All-Time High</dt>
+              <dd class="market-stats__value">$126,198.07</dd>
+            </div>
+            <div class="market-stats__item">
+              <dt class="market-stats__term" data-i18n="stats.supply">Circulating Supply</dt>
+              <dd class="market-stats__value">19.78M BTC</dd>
+            </div>
+          </dl>
+        </section>
+      </article>
+    </main>
+
+    <%- include('src/partials/footer.ejs') %>
+  </body>
+</html>
