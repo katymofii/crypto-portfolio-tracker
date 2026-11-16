@@ -10,7 +10,8 @@
     "build:vite": "npm run lint && vite build",
     "preview:webpack": "npm run lint && webpack serve --mode=development",
     "preview:vite": "npm run lint && vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "npm run build:vite && gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
