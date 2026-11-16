@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+//import "../styles/main.scss";
 import { Store } from "./core/store.js";
 import { api } from "./api/http.js";
 import { endpoints } from "./api/endpoints.js";

@@ -10,7 +10,7 @@
     "build:vite": "npm run lint && vite build",
     "preview:webpack": "npm run lint && webpack serve --mode=development",
     "preview:vite": "npm run lint && vite preview",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
