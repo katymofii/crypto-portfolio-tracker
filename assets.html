@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('src/partials/head.ejs', { title: 'Crypto Track — Assets List' }) %>
+  </head>
+  <body class="page">
+    <%- include('src/partials/header.ejs', { activePage: 'assets' }) %>
+
+    <main class="main">
+      <section class="market" aria-labelledby="market-heading">
+        <h1 class="market__title" id="market-heading" data-i18n="assets.title">All Coins</h1>
+
+        <div class="market__controls">
+          <form class="search-form" role="search" action="./assets.html" method="get">
+            <label class="visually-hidden" for="coin-search" data-i18n="assets.searchLabel">
+              Search coin
+            </label>
+            <input
+              class="search-form__input input"
+              id="coin-search"
+              name="q"
+              type="search"
+              placeholder="Search coin..."
+              aria-label="Search coin"
+            />
+          </form>
+
+          <div class="market__filters" role="group" aria-label="Filter coins">
+            <button class="filter-tab filter-tab--active" type="button" aria-pressed="true" data-i18n="filter.all">
+              All
+            </button>
+            <button class="filter-tab" type="button" aria-pressed="false" data-i18n="filter.gainers">
+              Gainers
+            </button>
+            <button class="filter-tab" type="button" aria-pressed="false" data-i18n="filter.losers">
+              Losers
+            </button>
+            <button class="filter-tab" type="button" aria-pressed="false" data-i18n="filter.watchlist">
+              Watchlist
+            </button>
+          </div>
+        </div>
+
+        <table class="market__table table">
+          <caption class="visually-hidden" data-i18n="assets.tableCaption">
+            Cryptocurrency market prices and 24-hour volume
+          </caption>
+          <thead class="table__head">
+            <tr class="table__row">
+              <th class="table__header" scope="col">#</th>
+              <th class="table__header" scope="col" data-i18n="table.coin">Coin</th>
+              <th class="table__header" scope="col" data-i18n="table.price">Price</th>
+              <th class="table__header" scope="col" data-i18n="table.change24h">24h Change</th>
+              <th class="table__header" scope="col" data-i18n="table.volume24h">24h Volume</th>
+              <th class="table__header" scope="col" data-i18n="table.holdings">Holdings</th>
+              <th class="table__header" scope="col" data-i18n="table.action">Action</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell">1</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/btc.webp" type="image/webp" />
+                    <img src="./images/btc.png" alt="Bitcoin logo" width="24" height="24" />
+                  </picture>
+                  <span>Bitcoin (BTC)</span>
+                </a>
+              </td>
+              <td class="table__cell">$86,549.00</td>
+              <td class="table__cell">+3.12%</td>
+              <td class="table__cell">$1.69 B</td>
+              <td class="table__cell">$12,846.00 (0.20 BTC)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade Bitcoin" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">2</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/eth.webp" type="image/webp" />
+                    <img src="./images/eth.png" alt="Ethereum logo" width="24" height="24" />
+                  </picture>
+                  <span>Ethereum (ETH)</span>
+                </a>
+              </td>
+              <td class="table__cell">$2,660.47</td>
+              <td class="table__cell">+2.1%</td>
+              <td class="table__cell">$831.6 m</td>
+              <td class="table__cell">$14,200.00 (5.35 ETH)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade Ethereum" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">4</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/sol.webp" type="image/webp" />
+                    <img src="./images/sol.png" alt="Solana logo" width="24" height="24" />
+                  </picture>
+                  <span>Solana (SOL)</span>
+                </a>
+              </td>
+              <td class="table__cell">$118.39</td>
+              <td class="table__cell">+1.48%</td>
+              <td class="table__cell">$3.58 B</td>
+              <td class="table__cell">$15,640.60 (136.4 SOL)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade Solana" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">28</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/link.webp" type="image/webp" />
+                    <img src="./images/link.png" alt="ChainLink logo" width="24" height="24" />
+                  </picture>
+                  <span>ChainLink (LINK)</span>
+                </a>
+              </td>
+              <td class="table__cell">$12.27</td>
+              <td class="table__cell">+0.75%</td>
+              <td class="table__cell">$1.03 B</td>
+              <td class="table__cell">$3,170.60 (254.4 LINK)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade ChainLink" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">6</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/zec.webp" type="image/webp" />
+                    <img src="./images/zec.png" alt="Zcash logo" width="24" height="24" />
+                  </picture>
+                  <span>Zcash (ZEC)</span>
+                </a>
+              </td>
+              <td class="table__cell">$1,441.77</td>
+              <td class="table__cell">-4.39%</td>
+              <td class="table__cell">$306.79 m</td>
+              <td class="table__cell">$0.01 (0 ZEC)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade Zcash" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">57</td>
+              <td class="table__cell">
+                <a class="table__coin-link" href="./asset-details.html">
+                  <picture>
+                    <source srcset="./images/near.webp" type="image/webp" />
+                    <img src="./images/near.png" alt="Near logo" width="24" height="24" />
+                  </picture>
+                  <span>Near (NEAR)</span>
+                </a>
+              </td>
+              <td class="table__cell">$4.98</td>
+              <td class="table__cell">-2.09%</td>
+              <td class="table__cell">$1.41 B</td>
+              <td class="table__cell">$0.00 (0 NEAR)</td>
+              <td class="table__cell">
+                <a class="button button--primary" href="./asset-details.html" aria-label="Trade Near" data-i18n="action.trade">
+                  Trade
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <nav class="pagination" aria-label="Assets pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link" href="./assets.html?page=1" aria-label="Previous page" data-i18n="pagination.prev">
+                &lt; Previous
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="./assets.html?page=1" aria-current="page">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="./assets.html?page=2">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="./assets.html?page=3">3</a>
+            </li>
+            <li class="pagination__item">
+              <span class="pagination__dots">...</span>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="./assets.html?page=10">10</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="./assets.html?page=2" aria-label="Next page" data-i18n="pagination.next">
+                Next &gt;
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+
+    <%- include('src/partials/footer.ejs') %>
+  </body>
+</html>
