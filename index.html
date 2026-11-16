@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crypto Track — Dashboard</title>
+    <script type="module" crossorigin src="./assets/main-BSp4febF.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+  <div class="header__container">
+    <a class="header__logo" href="./index.html" aria-label="Crypto Track Home" data-i18n="brand.name">
+      Crypto Track
+    </a>
+
+    <nav class="header__nav nav" aria-label="Main navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a
+            class="nav__link nav__link--active"
+            href="./index.html"
+            aria-current=&#34;page&#34;
+            data-i18n="nav.dashboard"
+          >
+            Dashboard
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link "
+            href="./assets.html"
+            
+            data-i18n="nav.assets"
+          >
+            Assets
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link "
+            href="./asset-details.html"
+            
+            data-i18n="nav.details"
+          >
+            Asset Details
+          </a>
+        </li>
+        <li class="nav__item">
+          <a
+            class="nav__link "
+            href="./profile.html"
+            
+            data-i18n="nav.profile"
+          >
+            Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__connect-btn button button--primary" type="button" data-i18n="header.connect">
+      Connect
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="portfolio" aria-labelledby="portfolio-heading">
+        <div class="portfolio__header">
+          <div class="portfolio__balance">
+            <h1 class="portfolio__title" id="portfolio-heading" data-i18n="dashboard.title">
+              Portfolio Overview
+            </h1>
+            <p class="portfolio__label" data-i18n="dashboard.totalBalance">Total Balance</p>
+            <p class="portfolio__amount">$45,820.00</p>
+            <p class="portfolio__change portfolio__change--positive">+$1,312.50 (+2.78%)</p>
+          </div>
+
+          <div class="portfolio__actions">
+            <a class="button button--primary" href="./assets.html" data-i18n="dashboard.addTransaction">
+              + Add Transaction
+            </a>
+            <a class="button button--secondary" href="./asset-details.html" data-i18n="dashboard.send">
+              Send
+            </a>
+          </div>
+        </div>
+
+        <section class="portfolio__assets" aria-labelledby="top-assets-heading">
+          <h2 class="portfolio__subtitle" id="top-assets-heading" data-i18n="dashboard.topAssets">
+            Top Assets
+          </h2>
+          <div class="portfolio__cards">
+            <article class="coin-card" itemscope itemtype="https://schema.org/Product">
+  <header class="coin-card__header">
+    <picture class="coin-card__icon">
+      <source srcset="./images/btc.webp" type="image/webp" />
+      <img
+        src="./images/btc.png"
+        alt="Bitcoin icon"
+        width="32"
+        height="32"
+        itemprop="image"
+      />
+    </picture>
+    <div class="coin-card__title-group">
+      <h3 class="coin-card__name" itemprop="name">
+        <a class="coin-card__link" href="./asset-details.html">Bitcoin</a>
+      </h3>
+      <span class="coin-card__ticker" itemprop="sku">BTC</span>
+    </div>
+    <span class="coin-card__badge coin-card__badge--up">+3.12%</span>
+  </header>
+
+  <div class="coin-card__body" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="USD" />
+    <p class="coin-card__value" itemprop="price" content="12846.00">$12,846.00</p>
+    <p class="coin-card__amount">0.34 BTC</p>
+  </div>
+</article>
+
+            <article class="coin-card" itemscope itemtype="https://schema.org/Product">
+  <header class="coin-card__header">
+    <picture class="coin-card__icon">
+      <source srcset="./images/eth.webp" type="image/webp" />
+      <img
+        src="./images/eth.png"
+        alt="Ethereum icon"
+        width="32"
+        height="32"
+        itemprop="image"
+      />
+    </picture>
+    <div class="coin-card__title-group">
+      <h3 class="coin-card__name" itemprop="name">
+        <a class="coin-card__link" href="./asset-details.html">Ethereum</a>
+      </h3>
+      <span class="coin-card__ticker" itemprop="sku">ETH</span>
+    </div>
+    <span class="coin-card__badge coin-card__badge--up">+2.11%</span>
+  </header>
+
+  <div class="coin-card__body" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="USD" />
+    <p class="coin-card__value" itemprop="price" content="14200.00">$14,200.00</p>
+    <p class="coin-card__amount">5.35 ETH</p>
+  </div>
+</article>
+
+            <article class="coin-card" itemscope itemtype="https://schema.org/Product">
+  <header class="coin-card__header">
+    <picture class="coin-card__icon">
+      <source srcset="./images/link.webp" type="image/webp" />
+      <img
+        src="./images/link.png"
+        alt="ChainLink icon"
+        width="32"
+        height="32"
+        itemprop="image"
+      />
+    </picture>
+    <div class="coin-card__title-group">
+      <h3 class="coin-card__name" itemprop="name">
+        <a class="coin-card__link" href="./asset-details.html">ChainLink</a>
+      </h3>
+      <span class="coin-card__ticker" itemprop="sku">LINK</span>
+    </div>
+    <span class="coin-card__badge coin-card__badge--up">+0.13%</span>
+  </header>
+
+  <div class="coin-card__body" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="USD" />
+    <p class="coin-card__value" itemprop="price" content="3170.60">$3,170.60</p>
+    <p class="coin-card__amount">254.41 LINK</p>
+  </div>
+</article>
+
+            <article class="coin-card" itemscope itemtype="https://schema.org/Product">
+  <header class="coin-card__header">
+    <picture class="coin-card__icon">
+      <source srcset="./images/sol.webp" type="image/webp" />
+      <img
+        src="./images/sol.png"
+        alt="Solana icon"
+        width="32"
+        height="32"
+        itemprop="image"
+      />
+    </picture>
+    <div class="coin-card__title-group">
+      <h3 class="coin-card__name" itemprop="name">
+        <a class="coin-card__link" href="./asset-details.html">Solana</a>
+      </h3>
+      <span class="coin-card__ticker" itemprop="sku">SOL</span>
+    </div>
+    <span class="coin-card__badge coin-card__badge--down">-0.82%</span>
+  </header>
+
+  <div class="coin-card__body" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="priceCurrency" content="USD" />
+    <p class="coin-card__value" itemprop="price" content="15640.60">$15,640.60</p>
+    <p class="coin-card__amount">136.45 SOL</p>
+  </div>
+</article>
+          </div>
+        </section>
+      </section>
+
+      <section class="transactions" aria-labelledby="transactions-heading">
+        <h2 class="transactions__title" id="transactions-heading" data-i18n="dashboard.recentTransactions">
+          Recent Transactions
+        </h2>
+
+        <table class="transactions__table table">
+          <caption class="visually-hidden" data-i18n="dashboard.transactionsCaption">
+            List of recent cryptocurrency transactions
+          </caption>
+          <thead class="table__head">
+            <tr class="table__row">
+              <th class="table__header" scope="col" data-i18n="table.type">Type</th>
+              <th class="table__header" scope="col" data-i18n="table.asset">Asset</th>
+              <th class="table__header" scope="col" data-i18n="table.amount">Amount</th>
+              <th class="table__header" scope="col" data-i18n="table.change">Change</th>
+              <th class="table__header" scope="col" data-i18n="table.status">Status</th>
+              <th class="table__header" scope="col" data-i18n="table.time">Time</th>
+              <th class="table__header" scope="col" data-i18n="table.action">Action</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell" data-i18n="tx.buy">Buy</td>
+              <td class="table__cell">Bitcoin (BTC)</td>
+              <td class="table__cell">0.05 BTC</td>
+              <td class="table__cell">+14.7%</td>
+              <td class="table__cell" data-i18n="status.completed">Completed</td>
+              <td class="table__cell"><time datetime="2026-09-23T15:34:22">23.09.2026 / 15:34:22</time></td>
+              <td class="table__cell">
+                <a class="button button--small" href="./asset-details.html" aria-label="View Bitcoin transaction details" data-i18n="action.details">
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell" data-i18n="tx.buy">Buy</td>
+              <td class="table__cell">Ethereum (ETH)</td>
+              <td class="table__cell">2 ETH</td>
+              <td class="table__cell">+2.1%</td>
+              <td class="table__cell" data-i18n="status.completed">Completed</td>
+              <td class="table__cell"><time datetime="2026-09-23T13:48:49">23.09.2026 / 13:48:49</time></td>
+              <td class="table__cell">
+                <a class="button button--small" href="./asset-details.html" aria-label="View Ethereum transaction details" data-i18n="action.details">
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell" data-i18n="tx.sell">Sell</td>
+              <td class="table__cell">Solana (SOL)</td>
+              <td class="table__cell">50 SOL</td>
+              <td class="table__cell">-36.7%</td>
+              <td class="table__cell" data-i18n="status.completed">Completed</td>
+              <td class="table__cell"><time datetime="2026-09-21T19:52:02">21.09.2026 / 19:52:02</time></td>
+              <td class="table__cell">
+                <a class="button button--small" href="./asset-details.html" aria-label="View Solana transaction details" data-i18n="action.details">
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell" data-i18n="tx.transfer">Transfer</td>
+              <td class="table__cell">ChainLink (LINK)</td>
+              <td class="table__cell">43 LINK</td>
+              <td class="table__cell">-16.9%</td>
+              <td class="table__cell" data-i18n="status.awaiting">Awaiting...</td>
+              <td class="table__cell">
+                <a class="table__link" href="./asset-details.html" data-i18n="status.check">Check transaction status</a>
+              </td>
+              <td class="table__cell">
+                <a class="button button--small" href="./asset-details.html" aria-label="View ChainLink transaction details" data-i18n="action.details">
+                  Details
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="footer__container">
+    <p class="footer__copyright" data-i18n="footer.copyright">
+      &copy; 2026 Crypto Track. All rights reserved.
+    </p>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="./index.html" data-i18n="nav.dashboard">Dashboard</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="./assets.html" data-i18n="nav.assets">Assets</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="./asset-details.html" data-i18n="nav.details">Asset Details</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="./profile.html" data-i18n="nav.profile">Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+  </body>
+</html>
